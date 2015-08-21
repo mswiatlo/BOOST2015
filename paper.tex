@@ -1,0 +1,78 @@
+\documentclass[a4paper,11pt]{article}
+\pdfoutput=1 
+
+\usepackage{cancel}
+\usepackage{jheppub} 
+\usepackage[T1]{fontenc} 
+\usepackage{overpic}
+
+\usepackage{color}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{slashed}
+\usepackage{amssymb}
+\usepackage{xspace}            % for correct spacing after commands
+
+\def\slashchar#1{\setbox0=\hbox{$#1$}           % set a box for #1
+   \dimen0=\wd0                                 % and get its size
+   \setbox1=\hbox{/} \dimen1=\wd1               % get size of /
+   \ifdim\dimen0>\dimen1                        % #1 is bigger
+      \rlap{\hbox to \dimen0{\hfil/\hfil}}#1 
+   \else                                        % / is bigger
+      \rlap{\hbox to \dimen1{\hfil$#1$\hfil}}/                                    \fi}
+
+\DeclareMathOperator{\sgn}{sgn}
+\newtheorem{prop}{Proposition}
+\newtheorem{cor}{Corollary}
+\newcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
+\newcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
+
+\newcommand{\editnote}[2]{(\textcolor{red}{#1: #2})}
+
+\title{\boldmath The Proceedings of the BOOST 2015 Conference: A Review of Jet Substructure at the Start of LHC Run 2}
+
+\author{Steven Schramm$^{a}$,}
+\author{Sal Rappoccio$^{b}$}
+
+
+\affiliation{$^a$Universite de Geneve}
+\affiliation{$^b$SUNY Buffalo}
+
+
+\abstract{
+Is very abstract
+
+}
+
+\begin{document} 
+\maketitle
+\flushbottom
+
+\section{Introduction} 
+\input{sections/introduction.tex}
+
+\section{Jet Tagging and Resonance Searches}
+\input{sections/tagging.tex}
+
+
+\section{Other Searches With Substructure}
+\input{sections/othersearches.tex}
+
+
+\section{Progress in Analytical Calculations}
+\input{sections/calculations.tex}
+
+\section{Experimental Measurements}
+\input{sections/measurements.tex}
+
+\section{Prospects for Super Boosted Objects}
+\input{sections/superboosted.tex}
+
+\section{Conclusion}
+\input{sections/conclusions.tex}
+
+
+\section{Acknowledgements}
+
+
+\end{document}  
